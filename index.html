@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Inventory Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Product Inventory Manager</h1>
+    <p class="subtitle">TypeScript Inventory Application</p>
+
+    <form id="productForm">
+      <input type="text" id="name" placeholder="Product name" required>
+      <input type="number" id="price" placeholder="Price" min="0" step="0.01" required>
+      <input type="number" id="quantity" placeholder="Quantity" min="0" required>
+      <button type="submit">Add Product</button>
+    </form>
+
+    <div class="summary">
+      <div>Total Products: <strong id="totalProducts">0</strong></div>
+      <div>Total Items: <strong id="totalItems">0</strong></div>
+      <div>Inventory Value: <strong id="totalValue">₹0.00</strong></div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Value</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="productTable"></tbody>
+    </table>
+
+    <p id="emptyMessage">No products added yet.</p>
+  </div>
+
+  <script src="dist/app.js"></script>
+</body>
+</html>
